@@ -112,5 +112,4 @@ Shader "Custom/Grass" {
         }
     }
     FallBack "Diffuse"
-    CustomEditor "ShaderForgeMaterialInspector"
 }
