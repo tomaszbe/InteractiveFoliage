@@ -10,15 +10,16 @@ public class Setup : MonoBehaviour {
 	public Material mat;
 
 	// Use this for initialization
-	void Start () {
+	void FixedUpdate () {
 		Matrix4x4 vp = cam.projectionMatrix * cam.worldToCameraMatrix;
 
 
 		mat.SetMatrix("_Matrix", vp);
-		mat.SetTexture("_PlayersTexture", cam.targetTexture);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
+
+    // Update is called once per frame
+    private void Start()
+    {
+        mat.SetTexture("_PlayersTexture", cam.targetTexture);
+    }
 }
